@@ -28,3 +28,5 @@ With the server running, curl the URL with the `X-Requested-With` header.
 
     $ curl http://localhost:3000/ -H 'X-Requested-With: XMLHttpRequest'
     > ])}while(1);</x>{"title":"Express"}
+
+
