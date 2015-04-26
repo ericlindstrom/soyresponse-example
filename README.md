@@ -2,12 +2,12 @@
 
 ## Setup
 
-1. Install
+#### 1. Install
 
     npm install
     npm install --save ericlindstrom/soyresponse
 
-2. Replace view engine setup with:
+#### 2. Replace view engine setup with:
 
     var soyresponse = require('soyresponse');
     
@@ -17,10 +17,10 @@
     };
     app.use(soyresponse(__dirname, soyResponseOptions));
 
-3. Replace views with soy templating. see `views` folder
+#### 3. Replace views with soy templating. see `views` folder
 
-4. Change all render methods to use new templates `example.views`, see routes 
-folder and error handler routes.
+#### 4. Change all render methods to use new templates `example.views`, see 
+routes folder and error handler routes.
 
 ## Testing JSON Response
 
