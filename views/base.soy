@@ -1,0 +1,49 @@
+{namespace example.views}
+
+/**
+ *  base template
+ *  @param GLOBAL
+ *  @param? title
+ *  @param content
+ */
+{template .base}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{if $title}{$title} | {/if}Example</title>
+    <link href="{$GLOBAL.STATIC_URL}stylesheets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    {$content}
+  </body>
+</html>
+{/template}
+
+
+/**
+ *  index
+ *  @param title
+ */
+{template .index}
+{call example.views.base data="all"}
+  {param content kind="html"}
+    <h1>{$title}</h1>
+  {/param}
+{/call}
+{/template}
+
+
+/**
+ *  Error template
+ *  @param message
+ *  @param error
+ */
+{template .error}
+{call example.views.base data="all"}
+  {param title: $message /}
+  {param content kind="html"}
+    <h1>{$message}</h1>
+    <pre>{$error}</pre>
+  {/param}
+{/call}
+{/template}
